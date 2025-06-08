@@ -1,3 +1,3 @@
 // https://ocr.space/
 
-const free_ORC_API_URL = 'K89188599188957';
+const free_ORC_API_URL = 'API_KEY_HERE';
