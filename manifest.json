@@ -1,0 +1,51 @@
+{
+    "manifest_version": 2,
+    "name": "BlackOCR",
+    "version": "1.0",
+    "description": "Capture screen area and extract text using OCR.",
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "<all_urls>",
+        "clipboardWrite",
+        "storage"
+    ],
+    "browser_action": {
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png",
+            "128": "icons/icon128.png"
+        },
+        "default_title": "BlackOCR",
+        "default_popup": "index.html"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content-script.js"],
+            "css": ["style.css"]
+        }
+    ],
+    "web_accessible_resources": [
+        "screen.capture.js",
+        "ui.js"
+    ],
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+S"
+            },
+            "description": "Open BlackOCR"
+        }
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "blackocr@example.com",
+            "strict_min_version": "57.0"
+        }
+    }
+}

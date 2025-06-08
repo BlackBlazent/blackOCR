@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BlackOCR</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- Tesseract.js for OCR -->
+  <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+</head>
+<body class="BlackOCR">
+  <div class="ui"></div>
+  
+  <!-- Load scripts in correct order -->
+  <script src="background.js"></script>
+  <script src="content-script.js"></script>
+  <script src="ocr.js"></script>
+  <script src="ui.js"></script>
+  <script src="popup.js" defer></script>
+  <script src="screen.capture.js"></script>
+</body>
+</html>
